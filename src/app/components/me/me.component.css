@@ -1,0 +1,238 @@
+.container{
+    width: 100vw;
+    height: 93vh;
+}
+.account{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1vw;
+}
+.user{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.profile{
+    width: auto;
+    height: auto;
+}
+.user .img{
+    width: 12vw;
+    height: 12vw;
+    border-radius: 100vw;
+    overflow: hidden;
+}
+.config{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(128, 128, 128, 0.1);
+    font-size: 2vw;
+    cursor: pointer;
+}
+.user .img:hover .config{
+    display: flex;
+}
+.user .img img{
+    width: 100%;
+    height: 100%;
+}
+.user .nickname{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user .nickname h3{
+    font-size: 2.5vw;
+}
+div.description{
+    width: 70%;
+    height: 70%;
+    overflow: hidden;
+    border-radius: 1vw;
+}
+div.button-textarea{
+    width: 100%;
+    height: 2vw;
+    position: relative;
+    background: rgba(128, 128, 128, 0.5);
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+div.button-textarea button{
+    width: 10%;
+    height: 80%;
+    border-radius: .5vw;
+    border: none;
+    background: rgba(128, 128, 128, 0.5);
+    cursor: pointer;
+    font-size: 1.3vw;
+}
+textarea.description{
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    overflow-y: scroll;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1.1vw;
+    text-align: justify;
+}
+textarea.description::-webkit-scrollbar{
+    width: 0vw;
+    background: transparent;
+}
+textarea.description::-webkit-scrollbar-thumb{
+    width: 100%;
+    background: white;
+    border-radius: 100vw;
+}
+textarea.description:hover::-webkit-scrollbar{
+    width: .6vw;
+}
+h5.description{
+    font-size: 1.1vw;
+    writing-mode: horizontal-tb !important;
+    column-count: initial !important;
+    white-space: pre-wrap;
+    resize: auto;
+    overflow-wrap: break-word;
+}
+.data{
+    width: 50%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.values{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.values h4{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5vw;
+}
+.values p{
+    font-size: 2vw;
+}
+.posts{
+    width: 100%;
+    height: 52%;
+    overflow-y: scroll;
+}
+.posts::-webkit-scrollbar{
+    background: transparent;
+    width: .5vw;
+}
+.posts::-webkit-scrollbar-thumb{
+    width: 100%;
+    background: white;
+}
+.container-preview-post{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+.preview-post{
+    width: 80vw;
+    height: 80vh;
+}
+app-edit-profile{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+.alert-container{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alert{
+    width: 60vw;
+    height: 60vh;
+    background: rgb(1,0,21);;
+    border-radius: 1vw;
+    box-shadow: 0 0 1vw 0 black;
+    overflow: hidden;
+}
+.alert-group-tittle{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    background: rgba(31, 31, 31, 0.5);
+    padding-left: 2%;
+}
+.alert-group-tittle h3{
+    font-size: 1.5vw;
+}
+.alert-group{
+    width: 100%;
+    height: 70%;
+    padding: 2%;
+}
+.alert-group p{
+    font-size: 1.2vw;
+}
+.alert-group-buttons{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+}
+.alert-group-buttons button{
+    border: none;
+    background: transparent;
+    width: 20%;
+    height: 60%;
+    font-size: 1.5vw;
+    text-align: center;
+    cursor: pointer;
+    background: rgb(1, 0, 21);
+    transition: background 1s ease;
+    border-radius: .5vw;
+    margin-left: 1vw;
+}
+.alert-group-buttons button:hover{
+    background: rgb(206, 206, 206);
+    box-shadow: 0 0 .1vw 0 rgb(206, 206, 206), 0 0 .4vw 0 rgb(206, 206, 206), 0 0 .8vw 0 rgb(206, 206, 206);
+}
+.alert-group-buttons button.delete:hover{
+    background: rgb(202, 0, 0);
+    box-shadow: 0 0 .1vw 0 rgb(202, 0, 0), 0 0 .4vw 0 rgb(202, 0, 0), 0 0 .8vw 0 rgb(202, 0, 0);
+}

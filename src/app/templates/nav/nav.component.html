@@ -1,0 +1,17 @@
+<nav>
+    <ul class="tittle">
+        <a id="Tittle" class="tittle" *ngIf="status == true" routerLink="/home">Hades</a>
+        <a id="Tittle" class="tittle" *ngIf="status == false" routerLink="/signin">Hades</a>
+    </ul>
+    <ul *ngIf="status == true" class="options">
+        <li routerLink="/home">home</li>
+        <li routerLink="/search">search</li>
+        <li routerLink="/me">profile</li>
+        <li routerLink="/settings">settings</li>
+    </ul>
+    <ul *ngIf="status == false" class="options">
+        <li routerLink="/signup">signup</li>
+        <li routerLink="/signin">signin</li>
+    </ul>
+</nav>
+<div class="nav"></div>

@@ -1,0 +1,108 @@
+.container{
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    max-height: 100%;
+    box-shadow: 0 0 .3vw 0 rgb(0, 0, 0);
+    margin-bottom: 2vw;
+    background: rgb(1 0 18);
+    border-radius: 1.2vw;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.container::-webkit-scrollbar{
+    width: .5vw;
+    background: transparent;
+}
+.container::-webkit-scrollbar-thumb{
+    width: 100%;
+    background: white;
+    border-radius: 100vw;
+}
+.post{
+    width: 100%;
+    height: 90%;
+}
+.ng-group-tittle{
+    width: 100%;
+    height: 4.5vw;
+    background: rgb(90 90 90 / 20%);
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: space-between;
+}
+.ng-group-tittle .user .profile-img{
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100vw;
+    overflow: hidden;
+    margin-right: 1vw;
+}
+.profile-img img{
+    width: 100%;
+    height: 100%;
+}
+.user{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.ng-group-tittle .user h3{
+    font-size: 2vw;
+}
+.ng-group-tittle button{
+    font-size: 2vw;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.post .img{
+    width: 100%;
+    height: 32vw;
+    display: flex;
+    justify-content: center;
+    background: rgb(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.img img{
+    height: 100%;
+}
+video{
+    height: 100%;
+}
+.ng-group{
+    width: 100%;
+    height: auto;
+    max-height: 6vw;
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    overflow-y: scroll;
+}
+.ng-group::-webkit-scrollbar{
+    width: .3vw;
+    background: transparent;
+}
+.ng-group p{
+    width: 100%;
+    max-width: 100%;
+    font-size: 1vw;
+}
+.options{
+    width: 100%;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 2%;
+}
+/* comments */
+app-comment-bar{
+    width: 100%;
+    height: auto;
+}

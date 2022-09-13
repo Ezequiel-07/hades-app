@@ -1,0 +1,44 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+}
+.card{
+    width: 40vw;
+    height: 40vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.85);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1vw;
+}
+.card .header{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.header h3{
+    font-size: 1.5vw;
+}
+.header .close{
+    background: transparent;
+    border: none;
+    font-size: 2vw;
+    cursor: pointer;
+}
+.card .body{
+    width: 100%;
+    height: 85%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.body p{
+    font-size: 1.3vw;
+}

@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="postsData">
+        <div class="selector">
+    
+            <div class="div-group">
+                <button *ngIf="body.sort != 'following'" (click)="selectOption('following')">following</button>
+                <button *ngIf="body.sort == 'following'" (click)="selectOption('following')" class="active">following</button>
+            </div>
+            
+            <div class="div-group">
+                <button *ngIf="body.sort != 'date'" (click)="selectOption('date')">date</button>
+                <button *ngIf="body.sort == 'date'" (click)="selectOption('date')" class="active">date</button>
+            </div>
+    
+            <div class="div-group">
+                <button *ngIf="body.sort != 'popularity'" (click)="selectOption('popularity')">popularity</button>
+                <button *ngIf="body.sort == 'popularity'" (click)="selectOption('popularity')" class="active">popularity</button>
+            </div>
+    
+        </div>
+        <div class="selectorBlock"></div>
+        <div *ngFor="let values of values" class="posts">
+    
+            <div class="ng-group-tittle">
+                <div class="profile-img"><img src="{{ values.profile_Url }}" alt=""></div>
+                <h3>{{ values.nameOfUser }}</h3>
+            </div>
+    
+            <div class="img">
+                <img *ngIf="values.type == 'img'" src="{{ values.url }}" alt="">
+                <video *ngIf="values.type == 'video'" src="{{ values.url }}" alt="" controls></video>
+            </div>
+    
+            <div class="ng-group">
+                <p>{{ values.comment }}</p>
+            </div>
+    
+            <div class="options">
+                <app-options-bar [value]="values.public_id" (comments)="commentsHandler($event)" (eventData)="errorHandler($event)"></app-options-bar>
+            </div>
+    
+        </div>
+    </div>
+    <app-lateral-bar (modeValue)="controlMode($event)"></app-lateral-bar>
+</div>
+<app-error *ngFor="let error of errors" [message]="error"></app-error>
+
+<app-publish-post *ngIf="mode == 'publish-post'" (event)="controlMode($event)"></app-publish-post>
+
+<app-publish-video *ngIf="mode == 'publish-video'" (event)="controlMode($event)"></app-publish-video>
+
+<app-comment-bar *ngIf="comment_status == true" (reload)="reloadComment($event)" [public_id]="post_comment" [comments]="comments"></app-comment-bar>

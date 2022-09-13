@@ -1,0 +1,147 @@
+.container{
+    width: 100vw;
+    height: 93vh;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.postsData{
+    width: 80vw;
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+.postsData::-webkit-scrollbar{
+    width: .3vw;
+    background: transparent;
+}
+.postsData::-webkit-scrollbar-thumb{
+    width: .3vw;
+    background: white;
+    border-radius: .5vw;
+}
+.postsData:hover::-webkit-scrollbar{
+    width: .6vw;
+}
+.selector{
+    width: 80vw;
+    height: 5vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 2%;
+}
+.selectorBlock{
+    width: 80vw;
+    height: 7vh;
+}
+.selector .div-group{
+    width: 10%;
+    height: 90%;
+}
+.div-group button{
+    font-size: 1vw;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 100vw;
+    background: rgba(0, 0, 0, 0.2);
+}
+.div-group button.active{
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+/* posts */
+.posts{
+    width: 80%;
+    height: auto;
+    box-shadow: 0 0 .3vw 0 rgb(0, 0, 0);
+    margin-bottom: 2vw;
+    background: rgb(90 90 90 / 20%);
+    border-radius: 1.2vw;
+    overflow: hidden;
+}
+.ng-group-tittle{
+    width: 100%;
+    height: 4.5vw;
+    background: rgb(90 90 90 / 20%);
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 2%;
+}
+.ng-group-tittle .profile-img{
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100vw;
+    overflow: hidden;
+    margin-right: 1vw;
+}
+.profile-img img{
+    width: 100%;
+    height: 100%;
+}
+.ng-group-tittle h3{
+    font-size: 2vw;
+}
+.posts .img{
+    width: 100%;
+    height: 32vw;
+    display: flex;
+    justify-content: center;
+    background: rgb(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.img img{
+    height: 100%;
+}
+.img video{
+    height: 100%;
+}
+.ng-group{
+    width: 100%;
+    height: auto;
+    max-height: 6vw;
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    overflow-y: scroll;
+}
+.ng-group::-webkit-scrollbar{
+    width: .3vw;
+    background: transparent;
+}
+.ng-group p{
+    width: 100%;
+    max-width: 100%;
+    font-size: 1vw;
+    writing-mode: horizontal-tb !important;
+    column-count: initial !important;
+    white-space: pre-wrap;
+    resize: auto;
+    overflow-wrap: break-word;
+}
+.options{
+    width: 100%;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 2%;
+}
+/* lateral bar */
+app-lateral-bar{
+    width: 20vw;
+    height: 93vh;
+}
+
+app-comment-bar{
+    width: 20vw;
+    height: 93vh;
+    position: absolute;
+    top: 7vh;
+    left: 80vw;
+}

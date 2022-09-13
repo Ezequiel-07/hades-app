@@ -1,0 +1,67 @@
+<div class="container" *ngIf="user != ''">
+    <div class="account">
+        <div class="user">
+            <div class="profile">
+                <div class="img"><div (click)="editProfile()" class="config">✎</div><img [src]="user.profile_Url" alt=""></div>
+                <div class="nickname"><h3>{{ this.user.nickname }}</h3></div>
+            </div>
+            <div class="data">
+                <div class="values">
+                    <h4>followers:</h4>
+                    <p>{{ this.user.followers.length }}</p>
+                </div>
+                <div class="values">
+                    <h4>following:</h4>
+                    <p>{{ this.user.followerOf.length }}</p>
+                </div>
+                <div class="values">
+                    <h4>posts:</h4>
+                    <p>{{ this.user.posts.length }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="description">
+            <div *ngIf="modifyTextarea == false" class="button-textarea"><button (click)="alert()">modify</button></div>
+            <h5 *ngIf="modifyTextarea == false" class="description">{{ this.description.description }}</h5>
+            <div *ngIf="modifyTextarea == true" class="button-textarea"><button (click)="saveChanges()">save</button></div>
+            <textarea *ngIf="modifyTextarea == true" class="description" [(ngModel)]="description.description" name="description" id="description"></textarea>
+        </div>
+    </div>
+    <div class="posts">
+        <app-posts (delete)="deleteConfirm($event)" (post)="watchPost($event)" [_id]="user._id"></app-posts>
+    </div>
+</div>
+<app-edit-profile *ngIf="status == true" (close)="closeEdit()" [user]="user"></app-edit-profile>
+<div class="container-preview-post" *ngIf="Pstatus == true">
+    <div class="preview-post">
+        <app-posts-preview [post]="post" (eventClose)="close($event)"></app-posts-preview>
+    </div>
+</div>
+<div class="alert-container" *ngIf="deleteStatus == true">
+    <div class="alert">
+        <div class="alert-group-tittle">
+            <h3>you wish delete post</h3>
+        </div>
+        <div class="alert-group">
+            <p>if you delete the post you will not be able to recover it</p>
+        </div>
+        <div class="alert-group-buttons">
+            <button class="cancel" (click)="cancel()">cancel</button>
+            <button class="delete" (click)="delete()">delete</button>
+        </div>
+    </div>
+</div>
+<div class="alert-container" *ngIf="alertTextarea == true">
+    <div class="alert">
+        <div class="alert-group-tittle">
+            <h3>you wish modify description</h3>
+        </div>
+        <div class="alert-group">
+            <p>when wish save the changes press "save"</p>
+        </div>
+        <div class="alert-group-buttons">
+            <button class="cancel" (click)="noModify()">cancel</button>
+            <button class="delete" (click)="modify()">modify</button>
+        </div>
+    </div>
+</div>

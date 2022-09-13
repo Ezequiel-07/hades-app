@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="div-group">
+        <button (click)="close()">x</button>
+    </div>
+    <div class="div-group">
+        <button *ngIf="statusFollow == false" (click)="follow()">follow</button>
+        <button *ngIf="statusFollow == true" (click)="unfollow()">unfollow</button>
+    </div>
+    <div class="div-group">
+        <button *ngIf="statusBlock == false" (click)="block()">block</button>
+        <button *ngIf="statusBlock == true" (click)="unlock()">unlock</button>
+    </div>
+</div>

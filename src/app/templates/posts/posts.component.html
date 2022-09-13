@@ -1,0 +1,7 @@
+<div class="container">
+    <div *ngFor="let posts of values" class="post">
+        <div class="options"><div class="delete" (click)="deleteAction(posts)">🗑️</div><div class="preview" (click)="preview(posts)">🔎</div></div>
+        <img *ngIf="posts.type == 'img'" src="{{ posts.url }}" alt="">
+        <video *ngIf="posts.type == 'video'" src="{{ posts.url }}" alt=""></video>
+    </div>
+</div>

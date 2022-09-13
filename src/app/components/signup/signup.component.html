@@ -1,0 +1,31 @@
+<div class="container">
+    <form (submit)="signup()">
+
+        <div class="form-group-tittle">
+            <h2>signup</h2>
+        </div>
+        <div class="form-group">
+            <input type="text" name="name" placeholder="name" [(ngModel)]="body.name">
+        </div>
+        <div class="form-group">
+            <input type="text" name="nickname" placeholder="nickname" [(ngModel)]="body.nickname" (change)="verifyNickname()">
+            <p *ngIf="statusN == true">the nickname already it in use</p>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" placeholder="email" [(ngModel)]="body.email" (change)="verifyEmail()">
+            <p *ngIf="statusE == true">the email already it in use</p>
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" placeholder="password" [(ngModel)]="body.password">
+            <p *ngIf="body.password.length <= 5">the length of the password have that be higter to 6 characters</p>
+        </div>
+        <div class="form-group">
+            <input type="tel" name="phone" placeholder="phone" [(ngModel)]="body.phone">
+        </div>
+        <div class="form-group">
+            <button type="submit" *ngIf="body.name != '' && body.nickname != '' && body.email != '' && body.password != '' && body.phone != ''" class="send">signup</button>
+            <div *ngIf="body.name == '' || body.nickname == '' || body.email == '' || body.password == '' || body.phone == ''" class="invalid">signup</div>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="tittle">
+        <h2>Select how to make login</h2>
+    </div>
+
+    <!-- Login With Email -->
+    <div class="select">
+        <button (click)="withEmail()">Login with Email</button>
+    </div>
+
+    <input type="checkbox" *ngIf="status.withEmail == true" style="display: none;">
+    <div class="containerForm">
+        <form id="formEmail" (submit)="sendForm()">
+            <div class="form-group">
+                <p>email</p>
+                <input type="email" [(ngModel)]="body.email" name="email">
+                <label></label>
+            </div>
+            <div class="form-group">
+                <p>password</p>
+                <input type="password" [(ngModel)]="body.password" name="password">
+                <label></label>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Login With Nickname -->
+    <div class="select">
+        <button (click)="withNickname()">Login with Nickname</button>
+    </div>
+
+    <input type="checkbox" *ngIf="status.withNickname == true" style="display: none;">
+    <div class="containerForm">
+        <form id="formNickname" (submit)="sendForm()">
+            <div class="form-group">
+                <p>nickname</p>
+                <input type="text" [(ngModel)]="body.nickname" name="nickname">
+                <label></label>
+            </div>
+            <div class="form-group">
+                <p>password</p>
+                <input type="password" [(ngModel)]="body.password" name="password">
+                <label></label>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<app-error *ngIf="errors.length != 0" [message]="this.errors"></app-error>

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="container-search">
+        <div class="search">
+            <form>
+                <div class="form-group">
+                    <input type="text" [(ngModel)]="body.reg" name="reg" (change)="search()" placeholder="Search">
+                </div>
+            </form>
+        </div>
+        <a *ngFor="let account of results" class="ng-account" (click)="watchAccount(account)">
+            <div class="img"><img src="{{ account.profile_Url }}" alt=""></div>
+            <h3>{{ account.nickname }}</h3>
+        </a>
+    </div>
+    <app-account *ngIf="user.length != 0" [user]="this.user" [values]="this.postsValues" (post)="watchPost($event)"></app-account>
+</div>
+<div class="container-preview-post" *ngIf="status == true">
+    <div class="preview-post">
+        <app-posts-preview [post]="post" (eventClose)="close($event)"></app-posts-preview>
+    </div>
+</div>
+<app-error *ngFor="let error of errors" [message]="error"></app-error>

@@ -1,0 +1,78 @@
+.container{
+    width: 100vw;
+    height: 93vh;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.container-search{
+    width: 50vw;
+    height: 93vh;
+    border-right: .2vw solid;
+}
+.search{
+    width: 100%;
+    height: 10%;
+}
+.search form{
+    width: 100%;
+    height: 100%;
+}
+.search form .form-group{
+    width: 100%;
+    height: 100%;
+}
+.form-group input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: .2vw solid;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 2vw;
+}
+.ng-account{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-bottom: .1vw solid;
+    transition: background 1s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+.ng-account:hover{
+    background: rgba(0, 0, 0, 0.5);
+}
+.ng-account .img{
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100vw;
+    overflow: hidden;
+    margin-right: 3%;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+}
+.ng-account h3{
+    font-size: 1.8vw;
+}
+.container-preview-post{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+.preview-post{
+    width: 80vw;
+    height: 80vh;
+}

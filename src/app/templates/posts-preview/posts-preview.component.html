@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="post">
+
+        <div class="ng-group-tittle">
+            <div class="user">
+                <div class="profile-img"><img src="{{ this.post.profile_Url }}" alt=""></div>
+                <h3>{{ this.post.nameOfUser }}</h3>
+            </div>
+            <button (click)="close()">x</button>
+        </div>
+    
+        <div class="img">
+            <img *ngIf="post.type == 'img'" src="{{ this.post.url }}" alt="">
+            <video *ngIf="post.type == 'video'" src="{{ this.post.url }}" alt="" controls></video>
+        </div>
+    
+        <div class="ng-group">
+            <p>{{ this.post.comment }}</p>
+        </div>
+
+        <div class="options">
+            <app-options-bar [value]="this.post.public_id" (comments)="commentsHandler($event)"></app-options-bar>
+        </div>
+
+    </div>
+    <app-comment-bar *ngIf="comment_status == true" (reload)="reloadComment($event)" [public_id]="post_comment" [comments]="comments"></app-comment-bar>
+</div>

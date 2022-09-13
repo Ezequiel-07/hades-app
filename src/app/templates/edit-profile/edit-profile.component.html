@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="profile-img">
+        <app-modify-profile-img [Url]="user.profile_Url"></app-modify-profile-img>
+    </div>
+    <div class="right">
+        <div class="nickname">
+            <app-modify-nickname [nickname]="user.nickname"></app-modify-nickname>
+        </div>
+        <div class="name">
+            <app-modify-name [name]="user.name"></app-modify-name>
+        </div>
+    </div>
+    <div class="close"><button (click)="closeEvent()">x</button></div>
+</div>
