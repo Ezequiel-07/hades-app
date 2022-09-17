@@ -21,14 +21,17 @@ export class NavComponent implements OnInit {
       },error=>{
           console.log(error);
           localStorage.removeItem('token');
-          window.location.reload();
+          this.reload();
       }
     )}else{
+        this.reload();
+    }}
+
+  reload(){
       if(window.location.href == 'http://localhost:4200/signin' || window.location.href == 'http://localhost:4200/signup'){
         console.log('not loged');
       }else{
         window.location.href = '/signin';
       }
-    }}
-
+  }
 }
