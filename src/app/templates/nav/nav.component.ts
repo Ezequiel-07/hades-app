@@ -28,7 +28,7 @@ export class NavComponent implements OnInit {
     }}
 
   reload(){
-      if(window.location.href == '/signin' || window.location.href == '/signup'){
+      if(window.location.href == 'https://hades-app.vercel.app/signin' || window.location.href == 'https://hades-app.vercel.app/signup'){
         console.log('not loged');
       }else{
         window.location.href = '/signin';
