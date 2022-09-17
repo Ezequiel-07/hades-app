@@ -28,7 +28,7 @@ export class NavComponent implements OnInit {
     }}
 
   reload(){
-      if(window.location.href == 'http://localhost:4200/signin' || window.location.href == 'http://localhost:4200/signup'){
+      if(window.location.href == '/signin' || window.location.href == '/signup'){
         console.log('not loged');
       }else{
         window.location.href = '/signin';
