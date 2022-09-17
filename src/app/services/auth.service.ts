@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
-  URL:String = 'https://shy-teal-snapper-wear.cyclic.app/api'
+  URL:String = 'https://hades-app-server.herokuapp.com/api'
 
   constructor(private http: HttpClient) { }
 
